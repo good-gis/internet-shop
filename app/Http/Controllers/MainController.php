@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class MainController extends Controller
 {
@@ -25,8 +23,18 @@ class MainController extends Controller
         return view('category', compact('category'));
     }
 
-    public function product($product = null)
+    public function product($category, $product = null)
     {
         return view('product', ['product' => $product]);
+    }
+
+    public function basket()
+    {
+        return view('basket');
+    }
+
+    public function order()
+    {
+        return view('order');
     }
 }

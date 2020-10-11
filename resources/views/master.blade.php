@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Интернет Магазин: Главная</title>
+    <title>@yield('title')</title>
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <script src="/js/jquery.min.js"></script>
@@ -21,24 +21,12 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="">Все товары</a></li>
-                <li><a href="/categories">Категории</a>
+                <li class="active"><a href="{{ route('main') }}">Все товары</a></li>
+                <li><a href="{{ route('categories') }}">Категории</a>
                 </li>
-                <li><a href="/basket">В корзину</a></li>
-                <li><a href="/reset">Сбросить проект в начальное состояние</a></li>
-                <li><a href="/locale/en">en</a></li>
-
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">₽<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/currency/RUB">₽</a></li>
-                        <li><a href="/currency/USD">$</a></li>
-                        <li><a href="/currency/EUR">€</a></li>
-                    </ul>
-                </li>
+                <li><a href="{{ route('basket') }}">В корзину</a></li>
+                <li><a href="{{ route('main') }}">Сбросить проект в начальное состояние</a></li>
             </ul>
-
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/login">Войти</a></li>
 
@@ -48,7 +36,7 @@
 </nav>
 
 <div class="container">
-
+    @yield('content')
 </div>
 </body>
 </html>
