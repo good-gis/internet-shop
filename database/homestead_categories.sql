@@ -1,0 +1,2 @@
+INSERT INTO homestead.categories (id, name, code, description, image, created_at, updated_at) VALUES (1, 'Смартфоны', 'mobiles', 'Описание мобильных телефонов', null, '2020-10-11 18:14:55', '2020-10-11 18:14:55');
+INSERT INTO homestead.categories (id, name, code, description, image, created_at, updated_at) VALUES (2, 'Ноутбуки', 'notebooks', 'Описание ноутбуков', null, '2020-10-11 18:14:52', '2020-10-11 18:14:54');
