@@ -31,7 +31,9 @@
             </div>
         </form>
         <div class="row">
-            @include('card')
+            @foreach($products as $product)
+            @include('card', compact($product))
+            @endforeach
         </div>
         @include('paginator')
     </div>

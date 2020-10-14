@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Product;
 
 class MainController extends Controller
 {
     public function index()
     {
-        return view('main');
+        $products = Product::get();
+        return view('main', compact('products'));
     }
 
     public function categories()
@@ -26,15 +28,5 @@ class MainController extends Controller
     public function product($category, $product = null)
     {
         return view('product', ['product' => $product]);
-    }
-
-    public function basket()
-    {
-        return view('basket');
-    }
-
-    public function order()
-    {
-        return view('order');
     }
 }
